@@ -1,0 +1,404 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e90ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  color: #1e90ff;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.customer-details h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+
+/* Wiki Section */
+.wiki-section {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.wiki-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Sidebar (Inspired by Minecraft Wiki) */
+.wiki-sidebar {
+  flex: 0 0 200px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #167bd9;
+}
+
+.sidebar-nav h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.sidebar-nav ul li {
+  margin-bottom: 8px;
+}
+
+.sidebar-nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+}
+
+.sidebar-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.wiki-content {
+  flex: 1;
+  min-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.wiki-content h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.toc {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.toc h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.toc ul {
+  list-style: none;
+}
+
+.toc ul li {
+  margin-bottom: 5px;
+}
+
+.toc ul li a {
+  text-decoration: none;
+  color: #1e90ff;
+  font-size: 14px;
+}
+
+.toc ul li a:hover {
+  text-decoration: underline;
+}
+
+.wiki-content h2 {
+  font-size: 22px;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.wiki-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.wiki-content ul {
+  list-style: none;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.wiki-content ul li {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.wiki-content ul li::before {
+  content: "•";
+  color: #1e90ff;
+  position: absolute;
+  left: -20px;
+}
+
+.wiki-content ul li strong {
+  color: #333;
+}
+
+.wiki-content a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.wiki-content a:hover {
+  text-decoration: underline;
+}
+
+/* Server Information Tab */
+.server-info {
+  flex: 0 0 250px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.server-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.info-item {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.info-item strong {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.info-item .icon {
+  margin-right: 8px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.info-item p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.status.online {
+  color: #28a745;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.flag {
+  width: 20px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.info-item a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.tags span {
+  background-color: #ddd;
+  color: #333;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* Footer (Reused from SmideTech) */
+.footer {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}

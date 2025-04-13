@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmideTech - Login</title>
+    <link rel="icon" href="/asset/Smidetech logo2.png" type="image/png">
+    <link rel="stylesheet" href="/style/login,register.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <a href="page1.html" style="text-decoration: none;"><div class="logo">SmideTech</div></a>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Plugin</a>
+        <a href="#">Server</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <div class="register-form">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" placeholder="User name" name="username" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <div class="options">
+                        <label>
+                            <input type="checkbox" name="remember"> Remember Me
+                        </label>
+                        <a href="#" id="forgotPasswordLink">Bạn quên mật khẩu?</a>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="register-btn">Login</button>
+                        <button type="button" class="login-btn">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-section">
+            <img src="/asset/Smidetech logo1 (2).png" alt="">
+        </div>
+    </div>
+
+    <div class="popup" id="popupOverlay">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">×</span>
+            <h3>Quên mật khẩu</h3>
+            <p>Nhập email để lấy lại mật khẩu:</p>
+            <input type="email" id="recoveryEmail" placeholder="Nhập email của bạn" style="width: 95%; padding: 8px; margin: 10px 0;">
+            <div style="text-align: right;">
+                <button onclick="submitEmail()">Gửi</button>
+                <button onclick="closePopup()">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById('popupOverlay');
+        const forgotLink = document.getElementById('forgotPasswordLink');
+
+        
+        forgotLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            popup.style.display = 'flex';
+        });
+
+        
+        function closePopup() {
+            popup.style.display = 'none';
+            document.getElementById('recoveryEmail').value = ''; // Clear email input
+        }
+
+        
+        function submitEmail() {
+            const email = document.getElementById('recoveryEmail').value;
+            if (email.trim() === "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lỗi!',
+                    text: 'Vui lòng nhập email.',
+                });
+                return;
+            }
+
+            
+            Swal.fire({
+                icon: 'success',
+                title: 'Thành công!',
+                text: `Email khôi phục đã được gửi đến: ${email}`,
+                timer: 2000,
+                showConfirmButton: false
+            }).then(() => {
+                closePopup();
+            });
+        }
+
+        
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault(); 
+
+            
+            if (this.checkValidity()) {
+                
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Đăng nhập thành công!',
+                    text: 'Đang chuyển hướng...',
+                    timer: 2000,
+                    showConfirmButton: false
+                }).then(() => {
+                    
+                    window.location.href = 'page1.html';
+                });
+            } else {
+                
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lỗi!',
+                    text: 'Vui lòng điền đầy đủ thông tin!',
+                });
+            }
+        });
+
+        
+        document.querySelectorAll('.login-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = 'register.html';
+            });
+        });
+    </script>
+</body>
+</html>

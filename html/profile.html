@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmideTech</title>
+    <link rel="icon" href="/asset/Smidetech logo2.png" type="image/png">
+    <link rel="stylesheet" href="/style/profile.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="page1.html" style="text-decoration: none;"><div class="logo">SmideTech</div></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="page1.html">Home</a></li>
+                <li><a href="plugin.html">Plugin</a></li>
+                <li><a href="server.html">Server</a></li>
+                <li><a href="#footer-column">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="customer-info">
+            <a href="profile.html">
+            <img src="/asset/default-avatar-profile-icon-of-social-media-user-vector.jpg" alt="Customer Avatar" class="avatar"></a>
+            <a href="profile.html" style="text-decoration: none; color: black">
+            <div class="customer-details">
+                <h3>Lung Thị Linh</h3>
+                
+            </div>
+        </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="avt-container">
+            <img class="avt-info" src="/asset/default-avatar-profile-icon-of-social-media-user-vector.jpg" alt="">
+            <button class="edit-btn" onclick="showPopup()">Chỉnh sửa</button>
+        </div>
+        <section class="server-info">
+            <h2><span class="icon">📜</span> Profile</h2>
+            <table>
+                <tr>
+                    <td>Tên tài khoản</td>
+                    <td id="username">Lung Thị Linh</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td id="email">kangamer02@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Linh khí</td>
+                    <td>766747</td>
+                </tr>
+                <tr>
+                    <td>Cấp bậc</td>
+                    <td>Hợp thể</td>
+                </tr>
+                <tr>
+                    <td>Con đường tu luyện</td>
+                    <td>Pháp tu</td>
+                </tr>
+                <tr>
+                    <td>Linh căn</td>
+                    <td>Thủy</td>
+                </tr>
+            </table>
+            <button class="logout-btn">Đăng xuất</button>
+        </section>
+
+        <!-- Popup -->
+        <div id="editPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="hidePopup()">×</span>
+                <h3>Chỉnh sửa thông tin</h3>
+                <form id="editForm">
+                    <label for="editUsername">Tên tài khoản:</label>
+                    <input type="text" id="editUsername" name="editUsername" value="Lung Thị Linh"><br>
+                    <label for="editEmail">Email:</label>
+                    <input type="email" id="editEmail" name="editEmail" value="kangamer02@gmail.com"><br>
+                    <label for="editPassword">Mật khẩu:</label>
+                    <input type="password" id="editPassword" name="editPassword" placeholder="Nhập mật khẩu mới"><br>
+                    <button type="button" onclick="saveChanges()">Lưu</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+<footer class="footer" >
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>SmideTech</h3>
+            <p>Liên hệ với chúng tôi nếu bạn có bất cứ yêu cầu hay thắc mắc gì.</p>
+        </div>
+        <div class="footer-column" id="footer-column">
+            <h3>Công ty</h3>
+            <ul>
+                <li><a href="#footer">Thông tin</a></li>
+                <li><a href="page1.html">Trang chủ</a></li>
+                
+                <li><a href="#footer-column">Liên hệ với chúng tôi</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Địa chỉ</h3>
+            <p>45/68/4/35 Cao Lỗ, Phường 4, Quận 8, Thành phố Hồ Chí Minh, Việt Nam.</p>
+            <h4>Điện thoại</h4>
+            <p>0946819779</p>
+            <p>kangamer02@gmail.com</p>
+            <div class="social-icons">
+                <a href="https://discord.gg/wvTpmwzg"><img src="/asset/Discord_icon-removebg-preview.png" alt="Discord"></a>
+                <a href="https://www.facebook.com/KanCiGamer"><img src="/asset/fb.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/@KanCIGamer"><img src="/asset/yt.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 SmideTech. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        function showPopup() {
+            document.getElementById('editPopup').style.display = 'flex';
+        }
+
+        function hidePopup() {
+            document.getElementById('editPopup').style.display = 'none';
+        }
+
+        function saveChanges() {
+            const username = document.getElementById('editUsername').value;
+            const email = document.getElementById('editEmail').value;
+            const password = document.getElementById('editPassword').value;
+
+            
+            document.getElementById('username').textContent = username;
+            document.getElementById('email').textContent = email;
+
+           
+            document.querySelector('.customer-details h3').textContent = username;
+
+            
+            if (password) {
+                console.log("Mật khẩu mới:", password);
+                
+            }
+
+            
+            hidePopup();
+
+           
+            Swal.fire({
+                icon: 'success',
+                title: 'Thành công!',
+                text: 'Đã lưu thông tin.',
+                confirmButtonText: 'OK'
+            });
+        }
+    </script>
+</body>
+</html>

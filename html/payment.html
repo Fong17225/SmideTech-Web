@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smidetech</title>
+    <link rel="icon" href="/asset/Smidetech logo2.png" type="image/png">
+    <link rel="stylesheet" href="/style/payment.css">
+</head>
+<body>
+    <!-- Navbar (Reused from SmideTech) -->
+    <header>
+        <nav class="navbar">
+            <a href="page1.html" style="text-decoration: none;"><div class="logo">SmideTech</div></a>
+            <ul class="nav-links">
+                <li><a href="page1.html">Home</a></li>
+                <li><a href="plugin.html">Plugin</a></li>
+                <li><a href="server.html">Server</a></li>
+                <li><a href="page1.html#footer-column">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <img src="/asset/default-avatar-profile-icon-of-social-media-user-vector.jpg" alt="Customer Avatar" class="avatar">
+                <div class="customer-details">
+                    <h3>Lung Thị Linh</h3>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="checkout-container">
+            <!-- Customer Information -->
+            <div class="customer-info">
+                <h2>Thông tin khách hàng</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="full-name">Họ và tên *</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Nhập họ và tên" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Địa chỉ giao hàng *</label>
+                        <input type="text" id="address" name="address" placeholder="Nhập địa chỉ" required>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>Đơn hàng của bạn</h2>
+                <div class="order-item">
+                    <img src="/asset/webstart.jpg" alt="Webstart Plugin">
+                    <div class="item-details">
+                        <h3>Webstart Plugin</h3>
+                        
+                        <p>Giá: 3.499.000đ</p>
+                    </div>
+                </div>
+                <div class="order-total">
+                    <p>Tổng cộng: <span>3.499.000đ</span></p>
+                </div>
+                <div class="payment-methods">
+                    
+                    <div class="qr-code">
+                        <p>Quét mã QR để thanh toán:</p>
+                        <img src="/asset/qrcode.jpg" alt="QR Code for Payment">
+                        <p class="qr-instruction">Vui lòng quét mã QR bằng ứng dụng ngân hàng của bạn để hoàn tất thanh toán.</p>
+                    </div>
+                </div>
+                <button class="confirm-btn">Xác nhận đơn hàng</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer" >
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>SmideTech</h3>
+            <p>Liên hệ với chúng tôi nếu bạn có bất cứ yêu cầu hay thắc mắc gì.</p>
+        </div>
+        <div class="footer-column" id="footer-column">
+            <h3>Công ty</h3>
+            <ul>
+                <li><a href="#footer">Thông tin</a></li>
+                <li><a href="page1.html">Trang chủ</a></li>
+                
+                <li><a href="#footer-column">Liên hệ với chúng tôi</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Địa chỉ</h3>
+            <p>45/68/4/35 Cao Lỗ, Phường 4, Quận 8, Thành phố Hồ Chí Minh, Việt Nam.</p>
+            <h4>Điện thoại</h4>
+            <p>0946819779</p>
+            <p>kangamer02@gmail.com</p>
+            <div class="social-icons">
+                <a href="https://discord.gg/wvTpmwzg"><img src="/asset/Discord_icon-removebg-preview.png" alt="Discord"></a>
+                <a href="https://www.facebook.com/KanCiGamer"><img src="/asset/fb.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/@KanCIGamer"><img src="/asset/yt.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 SmideTech. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

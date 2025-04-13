@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.left-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.right-section {
+    flex: 1;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50%;
+}
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #1e90ff;
+}
+.nav {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #666;
+    font-size: 20px;
+}
+.nav a:hover {
+    color: #1e90ff;
+}
+.register-form {
+    width: 380px;
+}
+.register-form h2 {
+    color: #1e90ff;
+    text-align: center;
+    font-size: 36px;
+}
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+.options label {
+    font-size: 16px;
+    color: #666;
+}
+.options a {
+    font-size: 16px;
+    color: #1e90ff;
+    text-decoration: none;
+}
+.options a:hover {
+    text-decoration: underline;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.buttons .register-btn {
+    background-color: #1e90ff;
+    color: #fff;
+}
+.buttons .login-btn {
+    background-color: #fff;
+    color: #1e90ff;
+    border: 1px solid #1e90ff;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup-content h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.left-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #1e90ff;
+}
+.nav {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #666;
+    font-size: 20px;
+}
+.nav a:hover {
+    color: #1e90ff;
+}
+.feedback-form {
+    width: 380px;
+}
+.feedback-form h2 {
+    color: #1e90ff;
+    text-align: center;
+    font-size: 36px;
+}
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.feedback-form textarea {
+    height: 120px;
+    resize: none;
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0;
+    
+}
+.rating input {
+    display: none;
+}
+.rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.rating label:before {
+    content: '★';
+}
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffd700;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.buttons .submit-btn {
+    background-color: #1e90ff;
+    color: #fff;
+}
+.buttons .cancel-btn {
+    background-color: #fff;
+    color: #1e90ff;
+    border: 1px solid #1e90ff;
+}

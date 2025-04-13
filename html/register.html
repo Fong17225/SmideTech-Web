@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmideTech - Register</title>
+    <link rel="icon" href="/asset/Smidetech logo2.png" type="image/png">
+    <link rel="stylesheet" href="/style/login,register.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <a href="page1.html" style="text-decoration: none;"><div class="logo">SmideTech</div></a>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Plugin</a>
+        <a href="#">Server</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <div class="register-form">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <input type="text" placeholder="User name" name="username" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                    <input type="password" placeholder="Confirm Password" name="confirmPassword" id="confirmPassword" required>
+                    <div class="buttons">
+                        <button type="submit" class="register-btn">Register</button>
+                        <button type="button" class="login-btn">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-section">
+            <img src="/asset/Smidetech logo1 (2).png" alt="">
+        </div>
+    </div>
+    <script>
+        
+        document.getElementById("registerForm").addEventListener("submit", function(e) {
+            e.preventDefault(); 
+
+            
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            
+            if (this.checkValidity()) {
+                
+                if (password !== confirmPassword) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Lỗi!',
+                        text: 'Mật khẩu và xác nhận mật khẩu không khớp!',
+                    });
+                    return;
+                }
+
+                
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Đăng ký thành công!',
+                    text: 'Đang chuyển hướng...',
+                    timer: 2000,
+                    showConfirmButton: false
+                }).then(() => {
+                    
+                    this.reset();
+                    
+                    window.location.href = 'page1.html';
+                });
+            } else {
+                
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lỗi!',
+                    text: 'Vui lòng điền đầy đủ thông tin!',
+                });
+            }
+        });
+
+        
+        document.querySelectorAll('.login-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmideTech - Feedback</title>
+    <link rel="icon" href="/asset/Smidetech logo2.png" type="image/png">
+    <link rel="stylesheet" href="/style/login,register.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">SmideTech</div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Plugin</a>
+            <a href="#">Server</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="left-section">
+            <div class="feedback-form">
+                <h2>Feedback</h2>
+                <form id="feedbackForm">
+                    <input type="text" placeholder="Your Name" name="name" required>
+                    <input type="email" placeholder="Your Email" name="email" required>
+                    <div class="rating">
+                        <input type="radio" id="star1" name="rating" value="1" required>
+                        <label for="star1"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4"></label>
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5"></label>
+                    </div>
+                    <textarea placeholder="Your Feedback" name="feedback" required></textarea>
+                    <div class="buttons">
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-section">
+            <img src="/asset/Smidetech logo1 (2).png" alt="SmideTech Logo" class="logo-image">
+        </div>
+    </div>
+
+    
+
+    <script>
+        
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        
+        document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+            e.preventDefault(); 
+
+            
+            if (this.checkValidity()) {
+                
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Cảm ơn bạn đã gửi phản hồi cho chúng tôi.',
+                    text: 'Đang chuyển hướng...',
+                    timer: 2000,
+                    showConfirmButton: false
+                }).then(() => {
+                    
+                    this.reset();
+                    
+                });
+            } else {
+                
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please fill out all required fields!',
+                });
+            }
+        });
+
+        
+        document.querySelector('.cancel-btn').addEventListener('click', function() {
+            document.getElementById("feedbackForm").reset();
+        });
+    </script>
+</body>
+</html>
